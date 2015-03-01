@@ -1,14 +1,13 @@
-* { margin: 0; padding: 0;
-    font-family: 'Lucida Grande', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, sans-serif; }
-
 body {
     background-color: #eeeeee;
     color: #111111;
+    margin: 0; padding: 0;
+    font-family: 'Lucida Grande', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, sans-serif;
 }
 
 div.main {
-    max-width: 1000px;
-    margin: 0 auto;
+    max-width: 1100px;
+    margin: 0em auto;
 }
 
 h1 {
@@ -18,13 +17,19 @@ h1 {
 }
 
 h2 {
-    color: #4444ff;
+    color: #22cc22;
     font-weight: bold;
-    font-size: 1.5em;
+    font-size: 2em;
+    margin: 0em 0em 0em 0em;
 }
 
 h3 {
     color: #4444ff;
     font-weight: bold;
     font-size: 1em;
+}
+
+code {
+    font-family: Consolas, 'Courier New', Courier, Monaco, monospace;
+    font-size: 0.9em;
 }

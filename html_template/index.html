@@ -2,6 +2,9 @@
 <head>
 <meta charset="UTF-8">
 <link rel=stylesheet type="text/css" href="static/css/main.css">
+<link rel="stylesheet" href="static/js/highlight/styles/github.css">
+<script src="static/js/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
 <title>プログラミングコンテスト用オレオレ C++ ライブラリ集</title>
 </head>
 <body>
@@ -9,17 +12,18 @@
 <div class="main">
 <h1>プログラミングコンテスト用オレオレ C++ ライブラリ集</h1>
 % for category in code_list:
-    <h2>${ category[0] }</h2>
+    <h2>&#9733;${ category[0] }</h2>
     % for code in category[1]:
         <h3>${ code[0] }</h3>
         <div class="comment">
         ${ code[1] }
         </div>
         <%
-            raw_library = open(code[0]).read()
+            raw_library = open(library_dir + code[0]).read()
         %>
-        <pre><code>${ raw_library | h}</code></pre>
+        <pre><code class="c++">${ raw_library | h}</code></pre>
     % endfor
+    <hr>
 % endfor
 </div>
 
