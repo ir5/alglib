@@ -62,6 +62,41 @@ CODE_LIST = [
          操作対象の配列に直接対応する要素は data[n + i] (i=0,1,...,n-1) である．
          """,
          "structure/segtree_usage.cpp"),
+
+        ("structure/dice.cpp",
+         u"""さいころ．各変数の対応とかはコメントのアスキーアート参照．""",
+         None),
+
+        ("structure/rbst.cpp",
+         u"""Randomized Binary Search Tree．split/merge ベースの乱択平衡二分探索木．他の実装とは違い，頂点のポインタを保持する形で実装している．
+         各頂点は頂点の値(val)，付加情報(info)，サブツリーのサイズ(size)，左右のサブツリーのポインタ(l, r) を持っている．
+         マージの都合上，info と val は同じ型でないといけない．
+         Max / Min / Sum などのクエリを行いたい場合，クラス内の op 関数を書き換える．これは2つのノード同士をマージする場合の処理を記述する．
+         <ul>
+         <li>RBST(コンストラクタ) : 初期値を指定して初期化する．</li>
+         <li>split : 指定した位置で木を2分割する．</li>
+         <li>merge : 2つの木をマージする．</li>
+         <li>query : 指定した区間について op 関数を適応した値を返す．</li>
+         <li>insert/erase : 指定した位置に挿入/削除する．</li>
+         <li>at : 要素へのアクセス．</li>
+         </ul>
+         """,
+         "structure/rbst_usage.cpp"),
      ]
-    )
+    ),
+
+    ("Math",
+     [
+     ]
+    ),
+
+    ("Graph Algorithm",
+     [
+     ]
+    ),
+
+    ("Geometry",
+     [
+     ]
+    ),
 ]
