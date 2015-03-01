@@ -1,2 +1,2 @@
-# alglib
-プログラミングコンテスト用オレオレライブラリ集
+# 使い方
+python gen.py > index.html

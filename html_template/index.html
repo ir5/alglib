@@ -1,0 +1,27 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel=stylesheet type="text/css" href="static/css/main.css">
+<title>プログラミングコンテスト用オレオレ C++ ライブラリ集</title>
+</head>
+<body>
+
+<div class="main">
+<h1>プログラミングコンテスト用オレオレ C++ ライブラリ集</h1>
+% for category in code_list:
+    <h2>${ category[0] }</h2>
+    % for code in category[1]:
+        <h3>${ code[0] }</h3>
+        <div class="comment">
+        ${ code[1] }
+        </div>
+        <%
+            raw_library = open(code[0]).read()
+        %>
+        <pre><code>${ raw_library | h}</code></pre>
+    % endfor
+% endfor
+</div>
+
+</body>
+</html>
