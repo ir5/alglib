@@ -23,11 +23,20 @@ CODE_LIST = [
          </ul>""",
          None),
 
+        ("structure/bit.cpp",
+         u"""よくある Binary Indexed Tree．クラス内の型 T には操作対象の配列の要素の型を指定する．
+         <ul>
+         <li>init : サイズと各要素の初期値(0に相当する値)を指定して初期化する．</li>
+         <li>add : 指定された要素に値を足し込む．要素は 0-indexed で指定する．計算時間は O(log n)．</li>
+         <li>sum : 0 .. i までの要素の和を計算し出力する．計算時間は O(log n)．</li>
+         </ul>""",
+         None),
+
         ("structure/rmq.cpp",
-         u"""よくある Range Minimum/Maximum Query．クラス内の型 T には配列の要素の型を指定する．
+         u"""よくある Range Minimum/Maximum Query．クラス内の型 T には操作対象の配列の要素の型を指定する．
          <ul>
          <li>init  : サイズとオペレータを指定して初期化する．サイズは木のサイズではなく操作対象の配列のサイズを指定する．サイズは実装の都合で2のべき乗でなければならない．オペレータには区間に適用する functional オブジェクトを指定する．</li>
-         <li>overwrite : 指定された要素の値を更新する．計算時間は O(log n)．</li>
+         <li>overwrite : 指定された要素の値を更新する．要素は 0-indexed で指定する．計算時間は O(log n)．</li>
          <li>query : [fr, to) の要素にオペレータを適用したときの値を出力する．計算時間は O(log n)．</li>
          </ul>
          内部の実装においては data[1] が root を指している．
